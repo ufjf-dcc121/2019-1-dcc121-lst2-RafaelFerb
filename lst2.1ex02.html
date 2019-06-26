@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista 2.1 exe02</title>
+</head>
+<body>
+    <input type="text" id="entrada">
+    <button onclick="empilhar()">Empilhar</button>
+    <button onclick="desempilhar()">Desempilhar</button>
+    <ol id="pilha">
+    </ol>
+    <script>
+     function empilhar(){
+      var li = document.createElement('li');
+      var item = document.createTextNode(document.getElementById("entrada").value);
+      li.appendChild(item);
+      document.getElementById("pilha").appendChild(li);
+
+     }
+      function desempilhar(){
+        var lista = document.getElementById("pilha");
+        lista.removeChild(lista.childNodes[0]);
+      }    
+    
+    </script>
+</body>
+</html>

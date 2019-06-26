@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista 2.1 exe01</title>
+</head>
+<body>
+    <input type="text" id = "produto" />
+    <input type="value" id = "quantidade"/>
+    <button onclick="addProduto()">Adicionar</button>
+    <button onclick="apagar()">Apagar</button>
+    
+    <ul id = "compras"></ul>
+     
+
+    <script>
+      function addProduto(){
+      var li = document.createElement('li');
+      var produto = document.createTextNode(document.getElementById("produto").value +" - "+ document.getElementById("quantidade").value);
+      li.appendChild(produto);
+      document.getElementById("compras").appendChild(li);
+      
+      }
+       function apagar(){
+           var lista = document.getElementById("compras");
+           var li = document.getElementsByTagName('li');
+           while(li.length > 0){
+               lista.removeChild(lista.childNodes[0]);
+           }           
+        }
+    </script>
+</body>
+</html>

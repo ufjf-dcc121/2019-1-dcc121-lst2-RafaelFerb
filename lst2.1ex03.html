@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista 2.1 exe03</title>
+</head>
+<body>  
+    <div>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome"/>
+            </div>
+            <div>
+                <label for="idade">Idade:</label>
+                <input type="value" id="idade"/>
+            </div id="a">
+            <button onclick="dados()">Enviar</button>
+     <h4>Adulto</h4>   
+   <ul id="adulto" contenteditable="true"></ul>
+    <h4>Estudante</h4>
+   <ul id="estudante" contenteditable="true"></ul>
+   </div>
+    <script>
+        function dados(){
+            var li = document.createElement('li');
+            var idade = document.getElementById("idade").value;
+            var nome = document.createTextNode(document.getElementById("nome").value +" - "+ document.getElementById("idade").value);
+            li.appendChild(nome);
+             if(idade > 18)
+            document.getElementById("adulto").appendChild(li);
+             else
+            document.getElementById("estudante").appendChild(li);
+             
+        }
+        function editar(){
+            var b = document.createElement('button');
+            b.addEventListener("click", editar);
+
+             }
+    </script>
+</body>
+</html>
